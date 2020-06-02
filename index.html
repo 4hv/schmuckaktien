@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de" class="fullscreen">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Schmuckaktien</title>
+    <meta name="description" content="Historische Wertpapiere und Schmuckaktien kaufen"/>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/polaroid-gallery.css"/>
+</head>
+<body class="fullscreen">
+    <center><h1>Schmuckaktien</h1></center>
+
+<div id="gallery" class="fullscreen"></div>
+
+    <center>Hier kaufen</center>
+
+<div id="nav" class="navbar">
+    <button id="preview">&lt; zurück</button>
+    <button id="next">weiter &gt;</button>
+
+    <a id="copyright" href="http://andreasdittes.com/imprint">
+        <small>Impressum</small>
+    </a>. 
+
+</div>
+</body>
+<script type="text/javascript" src="js/polaroid-gallery.js"></script>
+<script>
+    window.onload = function () {
+        new polaroidGallery("data/data.json");
+    }
+</script>
+</html>
