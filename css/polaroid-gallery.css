@@ -1,5 +1,5 @@
 body {
-    background-color: #FFFFFF;
+    background-color: #BBBBBB;
     font-family: Arial;
 }
 
@@ -70,19 +70,19 @@ body {
 }
 
 figure {
-    width: 150px;
+    width: 220px;
     position: absolute;
-    padding: 30px;
+    padding: 0px;
     margin: 0 auto;
     text-align: center;
-    background-color: white;
+    box-shadow: 0 0 8px 0px #333;
 }
 
 figure img {
     height: auto;
     max-width: 100%;
     margin: 0 auto;
-    margin-bottom: 15px;
+    margin-bottom: -4px;
 }
 
 figure figcaption {
