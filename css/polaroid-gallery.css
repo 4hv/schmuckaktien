@@ -74,7 +74,7 @@ body {
 }
 
 figure {
-    width: 220px;
+    width: 440px;
     position: absolute;
     padding: 0px;
     margin: 0 auto;
@@ -142,4 +142,16 @@ button:hover {
 #copyright:hover {
     color: white;
     text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+    figure {
+        width: 160px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    figure {
+        width: 220px;
+    }
 }
