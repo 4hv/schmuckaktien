@@ -10,13 +10,45 @@
     <link rel="stylesheet" type="text/css" href="css/polaroid-gallery.css"/>
 </head>
 <body class="fullscreen">
-    <center><h1>Schmuckaktien</h1></center>
+    <center><h1>Schmuckaktien 🔖</h1></center>
 
 <div id="gallery" class="fullscreen"></div>
 
-    <center>Hier kaufen</center>
 
+<div id="nav2" class="navbar2">
+Interessiert an historischen Wertpapieren? Ein Paket aus 20 der angezeigten historischen Aktien sowie 5 historische Bonds jetz per Paypal kaufen. <br />Statt <strike>69€</strike> jetzt nur <b>49€</b> inkl. Versand in Deutschland. <br /><br /> 
+<div class="paypal-container">
+<div id="paypal-button-container"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=EUR" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'horizontal',
+          label: 'paypal',
+          tagline: true
+      },
+      createOrder: function(data, actions) {
+          return actions.order.create({
+              purchase_units: [{
+                  amount: {
+                      value: '49'
+                  }
+              }]
+          });
+      },
+      onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+              alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+      }
+  }).render('#paypal-button-container');
+</script>
+</div>
+</div>
 <div id="nav" class="navbar">
+
     <button id="preview">&lt; zurück</button>
     <button id="next">weiter &gt;</button>
 
